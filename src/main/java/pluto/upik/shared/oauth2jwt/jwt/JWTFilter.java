@@ -95,14 +95,13 @@ public class JWTFilter extends OncePerRequestFilter {
         return requestURI.startsWith("/oauth2/") ||
                 requestURI.startsWith("/login/") ||
                 requestURI.equals("/auth/reissue") ||
-                // ❌ /auth/logout, /auth/withdraw는 제거! (인증 필요)
                 requestURI.startsWith("/static/") ||
                 requestURI.startsWith("/css/") ||
                 requestURI.startsWith("/js/") ||
                 requestURI.startsWith("/images/") ||
                 requestURI.equals("/favicon.ico") ||
                 requestURI.equals("/error") ||
-                requestURI.equals("/api/my"); // 공개 API만 스킵
+                requestURI.equals("/api/my");
     }
 
     /**

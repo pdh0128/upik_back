@@ -14,7 +14,7 @@ public class CustomOAuth2User implements OAuth2User {
 
     private final UserDTO userDTO;
     private final UserRepository userRepository;
-    private User user; // ★★★ final 제거 ★★★
+    private final User user;
 
     // JWT 토큰용 생성자
     public CustomOAuth2User(UserDTO userDTO, UserRepository userRepository) {
