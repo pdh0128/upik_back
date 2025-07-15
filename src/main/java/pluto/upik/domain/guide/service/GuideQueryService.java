@@ -48,6 +48,7 @@ public class GuideQueryService implements GuideQueryServiceInterface {
                             .content(guide.getContent())
                             .createdAt(guide.getCreatedAt())
                             .like(guide.getLike() != null ? guide.getLike().intValue() : 0) // likeCount → like로 변경 및 null 체크 추가
+                            .voteId(guide.getVote() != null ? guide.getVote().getId() : null) // 투표 ID 추가
                             .build())
                     .collect(Collectors.toList());
 

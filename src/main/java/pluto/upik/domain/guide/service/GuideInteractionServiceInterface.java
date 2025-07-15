@@ -1,5 +1,8 @@
 package pluto.upik.domain.guide.service;
 
+import pluto.upik.domain.guide.data.model.Guide;
+
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -33,4 +36,14 @@ public interface GuideInteractionServiceInterface {
      * @throws pluto.upik.shared.exception.BusinessException 처리 중 오류 발생 시
      */
     boolean toggleReportAndRevote(UUID guideId, UUID userId, String reason);
+    
+    /**
+     * 특정 사용자가 생성한 가이드 목록을 조회합니다.
+     *
+     * @param userId 사용자 ID
+     * @return 사용자가 생성한 가이드 목록
+     * @throws pluto.upik.shared.exception.ResourceNotFoundException 사용자가 존재하지 않을 경우 발생
+     * @throws pluto.upik.shared.exception.BusinessException 처리 중 오류 발생 시
+     */
+    List<Guide> getUserCreatedGuides(UUID userId);
 }

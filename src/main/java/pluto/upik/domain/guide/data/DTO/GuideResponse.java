@@ -44,6 +44,11 @@ public class GuideResponse {
     private Integer like;  // likeCount에서 like로 변경, Long에서 Integer로 변경
     
     /**
+     * 관련 투표 ID
+     */
+    private UUID voteId;
+    
+    /**
      * 가이드 내용의 요약된 문자열을 반환합니다.
      * 
      * @param maxLength 최대 길이

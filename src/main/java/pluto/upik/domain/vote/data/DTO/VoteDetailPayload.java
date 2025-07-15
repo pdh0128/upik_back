@@ -21,4 +21,5 @@ public class VoteDetailPayload {
     private String finishedAt;
     private int totalResponses;
     private List<OptionWithStatsPayload> options;
+    private boolean hasVoted; // 사용자가 투표에 참여했는지 여부
 }

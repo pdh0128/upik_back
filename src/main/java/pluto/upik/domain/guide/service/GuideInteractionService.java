@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import pluto.upik.domain.guide.data.model.Guide;
 import pluto.upik.domain.guide.data.model.GuideAndUser;
 import pluto.upik.domain.guide.data.model.GuideAndUserId;
 import pluto.upik.domain.guide.repository.GuideAndUserRepository;
@@ -16,6 +17,7 @@ import pluto.upik.shared.exception.BusinessException;
 import pluto.upik.shared.exception.ResourceNotFoundException;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -90,7 +92,7 @@ public class GuideInteractionService implements GuideInteractionServiceInterface
         if (!userRepository.existsById(userId)) {
             log.warn("가이드 재투표 신고 토글 실패 - 사용자 없음 (userId: {})", userId);
             throw new ResourceNotFoundException("User not found: " + userId);
-}
+        }
 
         // 가이드 존재 확인
         if (!guideRepository.existsById(guideId)) {
@@ -128,6 +130,30 @@ public class GuideInteractionService implements GuideInteractionServiceInterface
             log.error("가이드 재투표 신고 토글 중 알 수 없는 오류 - userId: {}, guideId: {}, reason: {}, error: {}",
                     userId, guideId, reason, e.getMessage(), e);
             throw new BusinessException("알 수 없는 오류가 발생했습니다.");
+        }
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Guide> getUserCreatedGuides(UUID userId) {
+        log.info("사용자가 생성한 가이드 조회 요청 시작 - userId: {}", userId);
+        
+        // 사용자 존재 확인
+        if (!userRepository.existsById(userId)) {
+            log.warn("사용자가 생성한 가이드 조회 실패 - 사용자 없음 (userId: {})", userId);
+            throw new ResourceNotFoundException("User not found: " + userId);
+        }
+        
+        try {
+            // 사용자가 생성한 가이드 조회
+            List<Guide> userGuides = guideRepository.findGuidesByUserId(userId);
+            log.info("사용자가 생성한 가이드 조회 완료 - userId: {}, 가이드 수: {}", userId, userGuides.size());
+            return userGuides;
+        } catch (Exception e) {
+            log.error("사용자가 생성한 가이드 조회 중 오류 발생 - userId: {}, error: {}", userId, e.getMessage(), e);
+            throw new BusinessException("사용자가 생성한 가이드 조회 중 오류가 발생했습니다: " + e.getMessage());
         }
     }
 }

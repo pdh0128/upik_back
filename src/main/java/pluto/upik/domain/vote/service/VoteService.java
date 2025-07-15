@@ -15,6 +15,7 @@ import pluto.upik.domain.vote.data.DTO.VotePayload;
 import pluto.upik.domain.vote.data.model.Vote;
 import pluto.upik.domain.vote.repository.VoteRepository;
 import pluto.upik.domain.voteResponse.repository.VoteResponseRepository;
+import pluto.upik.domain.voteResponse.service.VoteResponseService;
 import pluto.upik.shared.exception.ResourceNotFoundException;
 
 import java.time.LocalDate;
@@ -31,6 +32,10 @@ public class VoteService {
     private final OptionRepository optionRepository;
     private final VoteResponseRepository voteResponseRepository;
     private final UserRepository userRepository;
+    private final VoteResponseService voteResponseService;
+
+    // 더미 사용자 ID
+    private static final UUID DUMMY_USER_ID = UUID.fromString("e49207e8-471a-11f0-937c-42010a800003");
 
     public VotePayload createVote(CreateVoteInput input) {
         // 1. Vote 엔티티 생성
@@ -61,30 +66,39 @@ public class VoteService {
 
     @Transactional(readOnly = true)
     public List<VotePayload> getAllVotes() {
+        return getAllVotes(DUMMY_USER_ID);
+    }
+
+    @Transactional(readOnly = true)
+    public List<VotePayload> getAllVotes(UUID userId) {
         List<Vote> votes = voteRepository.findAll();
         List<VotePayload> votePayloads = new ArrayList<>();
 
         for (Vote vote : votes) {
             List<Option> options = optionRepository.findByVoteId(vote.getId());
             Long totalResponses = voteResponseRepository.countByVoteId(vote.getId());
-        List<OptionWithStatsPayload> optionStats = new ArrayList<>();
-        for (Option option : options) {
-            Long optionCount = voteResponseRepository.countByOptionId(option.getId());
-            float percentage = totalResponses > 0 ? (float) optionCount * 100 / totalResponses : 0;
+            List<OptionWithStatsPayload> optionStats = new ArrayList<>();
+            for (Option option : options) {
+                Long optionCount = voteResponseRepository.countByOptionId(option.getId());
+                float percentage = totalResponses > 0 ? (float) optionCount * 100 / totalResponses : 0;
 
-            optionStats.add(new OptionWithStatsPayload(
-                option.getId(),
-                option.getContent(),
-                optionCount.intValue(),
-                percentage
-            ));
-        }
+                optionStats.add(new OptionWithStatsPayload(
+                    option.getId(),
+                    option.getContent(),
+                    optionCount.intValue(),
+                    percentage
+                ));
+            }
+
+            // 사용자가 이 투표에 참여했는지 확인
+            boolean hasVoted = voteResponseService.hasUserVoted(userId, vote.getId());
 
             votePayloads.add(VotePayload.fromEntityWithStats(
                 vote,
                 options,
                 optionStats,
-                totalResponses.intValue()
+                totalResponses.intValue(),
+                hasVoted
             ));
         }
 
@@ -93,6 +107,11 @@ public class VoteService {
 
     @Transactional(readOnly = true)
     public VoteDetailPayload getVoteById(UUID voteId) {
+        return getVoteById(voteId, DUMMY_USER_ID);
+    }
+
+    @Transactional(readOnly = true)
+    public VoteDetailPayload getVoteById(UUID voteId, UUID userId) {
         Vote vote = voteRepository.findById(voteId)
                 .orElseThrow(() -> new ResourceNotFoundException("투표를 찾을 수 없습니다: " + voteId));
 
@@ -121,6 +140,9 @@ public class VoteService {
             }
         }
 
+        // 사용자가 이 투표에 참여했는지 확인
+        boolean hasVoted = voteResponseService.hasUserVoted(userId, voteId);
+
         return VoteDetailPayload.builder()
                 .id(vote.getId())
                 .title(vote.getQuestion())
@@ -130,15 +152,16 @@ public class VoteService {
                 .finishedAt(vote.getFinishedAt().format(DateTimeFormatter.ISO_LOCAL_DATE))
                 .totalResponses(totalResponses.intValue())
                 .options(optionStats)
+                .hasVoted(hasVoted)
                 .build();
     }
 
-    // 새로 추가하는 메서드: 응답 수가 가장 많은 OPEN 상태 투표 조회
+    // 새로 추가하는 메서드: 응답 수가 가장 많은 OPEN 상태 투표 3개 조회
     @Transactional(readOnly = true)
-    public VotePayload getMostPopularOpenVote() {
+    public List<VotePayload> getMostPopularOpenVote() {
         List<Vote> openVotes = voteRepository.findByStatus(Vote.Status.OPEN);
         if (openVotes.isEmpty()) {
-            return null;
+            return Collections.emptyList();
         }
 
         Map<Vote, Long> voteResponseCounts = new HashMap<>();
@@ -147,30 +170,36 @@ public class VoteService {
             voteResponseCounts.put(vote, responseCount);
         }
 
-        // 응답 수가 가장 많은 투표 찾기
-        Map.Entry<Vote, Long> mostPopular = Collections.max(
-            voteResponseCounts.entrySet(),
-            Map.Entry.comparingByValue()
-        );
+        // 응답 수가 많은 순으로 정렬
+        List<Map.Entry<Vote, Long>> sortedVotes = voteResponseCounts.entrySet().stream()
+            .sorted(Map.Entry.<Vote, Long>comparingByValue().reversed())
+            .limit(3) // 상위 3개만 선택
+            .collect(Collectors.toList());
 
-        Vote vote = mostPopular.getKey();
-        Long totalResponses = mostPopular.getValue();
-        List<Option> options = optionRepository.findByVoteId(vote.getId());
+        List<VotePayload> result = new ArrayList<>();
+        for (Map.Entry<Vote, Long> entry : sortedVotes) {
+            Vote vote = entry.getKey();
+            Long totalResponses = entry.getValue();
+            List<Option> options = optionRepository.findByVoteId(vote.getId());
 
-        List<OptionWithStatsPayload> optionStats = new ArrayList<>();
-        for (Option option : options) {
-            Long optionCount = voteResponseRepository.countByOptionId(option.getId());
-            float percentage = totalResponses > 0 ? (float) optionCount * 100 / totalResponses : 0;
+            List<OptionWithStatsPayload> optionStats = new ArrayList<>();
+            for (Option option : options) {
+                Long optionCount = voteResponseRepository.countByOptionId(option.getId());
+                float percentage = totalResponses > 0 ? (float) optionCount * 100 / totalResponses : 0;
 
-            optionStats.add(new OptionWithStatsPayload(
-                option.getId(),
-                option.getContent(),
-                optionCount.intValue(),
-                percentage
-            ));
+                optionStats.add(new OptionWithStatsPayload(
+                    option.getId(),
+                    option.getContent(),
+                    optionCount.intValue(),
+                    percentage
+                ));
+            }
+
+            // 요청에 따라 투표하지 않은 것으로 표시
+            result.add(VotePayload.fromEntityWithStats(vote, options, optionStats, totalResponses.intValue(), false));
         }
 
-        return VotePayload.fromEntityWithStats(vote, options, optionStats, totalResponses.intValue());
+        return result;
     }
 
     // 새로 추가하는 메서드: 응답 수가 가장 적은 OPEN 상태 투표 조회
@@ -210,6 +239,7 @@ public class VoteService {
             ));
         }
 
-        return VotePayload.fromEntityWithStats(vote, options, optionStats, totalResponses.intValue());
+        // 요청에 따라 투표하지 않은 것으로 표시
+        return VotePayload.fromEntityWithStats(vote, options, optionStats, totalResponses.intValue(), false);
     }
 }

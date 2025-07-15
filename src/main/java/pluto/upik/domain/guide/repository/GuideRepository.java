@@ -53,6 +53,16 @@ public interface GuideRepository extends JpaRepository<Guide, UUID> {
     List<Guide> findGuidesByTitleContaining(@Param("keyword") String keyword);
 
     /**
+     * 특정 사용자가 생성한 가이드를 조회합니다.
+     * 투표 테이블을 통해 사용자가 생성한 가이드를 조회합니다.
+     *
+     * @param userId 사용자 ID
+     * @return 사용자가 생성한 가이드 목록
+     */
+    @Query("SELECT g FROM Guide g JOIN g.vote v WHERE v.user.id = :userId")
+    List<Guide> findGuidesByUserId(@Param("userId") UUID userId);
+
+    /**
      * 가이드의 좋아요 수를 1 증가시킵니다.
      *
      * @param guideId 가이드 ID

@@ -5,6 +5,7 @@ type GuideQuery {
 type GuideMutation {
     incrementGuideLike(id: ID!): Boolean!
     incrementGuideRevote(id: ID!, reason: String!): Boolean!
+    getUserCreatedGuides: [Guide]!
 }
 
 type Guide {
@@ -13,6 +14,7 @@ type Guide {
     content: String!
     createdAt: String!
     like: Int!
+    voteId: ID
 }
 
 type GuideDetail {

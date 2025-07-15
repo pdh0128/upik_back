@@ -24,6 +24,7 @@ public class VotePayload {
     private String status;
     private int totalResponses;
     private List<OptionWithStatsPayload> options;
+    private boolean hasVoted; // 사용자가 투표에 참여했는지 여부
 
     // 정적 팩토리 메서드 (옵션 통계 없이)
     public static VotePayload fromEntity(Vote vote, List<Option> options) {
@@ -37,12 +38,20 @@ public class VotePayload {
                 .options(options.stream()
                         .map(option -> new OptionWithStatsPayload(option.getId(), option.getContent(), 0, 0))
                         .toList())
+                .hasVoted(false) // 기본값
                 .build();
     }
 
     // 정적 팩토리 메서드 (옵션 통계 포함)
     public static VotePayload fromEntityWithStats(Vote vote, List<Option> options,
                                                  List<OptionWithStatsPayload> optionStats, int totalResponses) {
+        return fromEntityWithStats(vote, options, optionStats, totalResponses, false);
+    }
+    
+    // 정적 팩토리 메서드 (옵션 통계와 투표 여부 포함)
+    public static VotePayload fromEntityWithStats(Vote vote, List<Option> options,
+                                                 List<OptionWithStatsPayload> optionStats, int totalResponses,
+                                                 boolean hasVoted) {
         return VotePayload.builder()
                 .id(vote.getId())
                 .title(vote.getQuestion())
@@ -51,6 +60,7 @@ public class VotePayload {
                 .status(vote.getStatus().name())
                 .totalResponses(totalResponses)
                 .options(optionStats)
+                .hasVoted(hasVoted)
                 .build();
     }
 }

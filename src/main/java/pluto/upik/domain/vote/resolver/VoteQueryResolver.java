@@ -3,7 +3,8 @@ package pluto.upik.domain.vote.resolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
-import org.springframework.stereotype.Controller;
+// @Controller 어노테이션 제거
+import org.springframework.stereotype.Component;
 import pluto.upik.domain.vote.data.DTO.VoteDetailPayload;
 import pluto.upik.domain.vote.data.DTO.VotePayload;
 import pluto.upik.domain.vote.service.VoteService;
@@ -11,29 +12,39 @@ import pluto.upik.domain.vote.service.VoteService;
 import java.util.List;
 import java.util.UUID;
 
-@Controller
+// @Controller 어노테이션을 제거하여 이 클래스가 GraphQL 리졸버로 등록되지 않도록 함
+// 대신 @Component를 사용하여 필요한 경우 다른 클래스에서 주입받을 수 있도록 함
+@Component
 @RequiredArgsConstructor
 public class VoteQueryResolver {
 
     private final VoteService voteService;
+    
+    // 더미 사용자 ID
+    private static final UUID DUMMY_USER_ID = UUID.fromString("e49207e8-471a-11f0-937c-42010a800003");
 
+    // @SchemaMapping 어노테이션이 있어도 @Controller가 없으면 GraphQL 리졸버로 등록되지 않음
     @SchemaMapping(typeName = "VoteQuery", field = "getAllVotes")
     public List<VotePayload> getAllVotes() {
-        return voteService.getAllVotes();
+        // 목 데이터로 더미 사용자 ID 사용
+        return voteService.getAllVotes(DUMMY_USER_ID);
     }
 
     @SchemaMapping(typeName = "VoteQuery", field = "getVoteById")
     public VoteDetailPayload getVoteById(@Argument String id) {
-        return voteService.getVoteById(UUID.fromString(id));
+        // 목 데이터로 더미 사용자 ID 사용
+        return voteService.getVoteById(UUID.fromString(id), DUMMY_USER_ID);
     }
 
     @SchemaMapping(typeName = "VoteQuery", field = "getMostPopularOpenVote")
-    public VotePayload getMostPopularOpenVote() {
+    public List<VotePayload> getMostPopularOpenVote() {
+        // 인기 있는 투표 3개를 반환
         return voteService.getMostPopularOpenVote();
     }
 
     @SchemaMapping(typeName = "VoteQuery", field = "getLeastPopularOpenVote")
     public VotePayload getLeastPopularOpenVote() {
+        // 항상 투표하지 않은 것으로 표시 (VoteService에서 처리)
         return voteService.getLeastPopularOpenVote();
     }
 }

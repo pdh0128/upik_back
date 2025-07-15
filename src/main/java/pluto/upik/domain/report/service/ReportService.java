@@ -92,6 +92,7 @@ public class ReportService implements ReportServiceInterface {
                     .map(this::mapToReportResponse)
                     .collect(Collectors.toList());
 
+
             log.info("사용자 신고 목록 조회 완료 - userId: {}, 결과 개수: {}", userId, reports.size());
             return reports;
         } catch (Exception e) {
@@ -119,15 +120,6 @@ public class ReportService implements ReportServiceInterface {
                     .map(this::mapToReportResponse)
                     .collect(Collectors.toList());
 
-            for (ReportResponse report : reports) {
-                if(!guideRepository.existsById(report.getTargetId())) {
-                    report.setTargetType("vote");
-                }
-                else{
-                    report.setTargetType("guide");
-                }
-            }
-
             log.info("신고 대상 목록 조회 완료 - targetId: {}, 결과 개수: {}", targetId, reports.size());
             return reports;
         } catch (Exception e) {
@@ -154,15 +146,6 @@ public class ReportService implements ReportServiceInterface {
             List<ReportResponse> reports = reportList.stream()
                     .map(this::mapToReportResponse)
                     .collect(Collectors.toList());
-
-            for (ReportResponse report : reports) {
-                if(!guideRepository.existsById(report.getTargetId())) {
-                    report.setTargetType("vote");
-                }
-                else{
-                    report.setTargetType("guide");
-                }
-            }
 
             log.info("모든 신고 목록 조회 완료 - 결과 개수: {}", reports.size());
             return reports;
@@ -401,6 +384,7 @@ public class ReportService implements ReportServiceInterface {
 
     /**
      * Report 엔티티를 ReportResponse DTO로 변환합니다.
+     * 이 과정에서 targetType 필드도 설정합니다.
      *
      * @param report 변환할 Report 엔티티
      * @return 변환된 ReportResponse 객체
@@ -408,15 +392,24 @@ public class ReportService implements ReportServiceInterface {
     private ReportResponse mapToReportResponse(Report report) {
         log.debug("Report 엔티티를 ReportResponse로 변환 중 - reportId: {}", report.getUserId());
 
+        // targetType 결정: 가이드에 존재하면 "guide", 아니면 "vote"
+        String targetType;
+        if(guideRepository.existsById(report.getTargetId())) {
+            targetType = "guide";
+        } else {
+            targetType = "vote";
+        }
+
         ReportResponse response = new ReportResponse(
                 report.getUserId(),
                 report.getTargetId(),
                 report.getReason(),
-                "",
+                targetType, // 결정된 targetType 설정
                 report.getCreatedAt()
         );
 
-        log.debug("Report 엔티티 변환 완료 - reportId: {}, response: {}", report.getUserId(), response);
+        log.debug("Report 엔티티 변환 완료 - reportId: {}, targetType: {}, response: {}",
+                report.getUserId(), targetType, response);
         return response;
     }
 }

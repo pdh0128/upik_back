@@ -51,6 +51,11 @@ dependencies {
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
     implementation 'io.github.cdimascio:dotenv-java:3.0.0'
 
+    implementation 'com.azure:azure-ai-inference:1.0.0-beta.1'
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+
+    // build.gradle에 추가할 경우
+    implementation 'com.google.cloud:google-cloud-translate:2.3.0'
 }
 
 dependencyManagement {

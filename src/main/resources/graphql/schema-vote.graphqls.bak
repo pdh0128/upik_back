@@ -1,0 +1,54 @@
+type VoteMutation {
+  createVote(input: CreateVoteInput!): VotePayload!
+}
+
+input CreateVoteInput {
+  title: String!
+  category: String!
+  options: [String!]!
+}
+
+type VotePayload {
+  id: ID!
+  title: String!
+  category: String!
+  status: String!
+  totalResponses: Int!
+  finishedAt: String!
+  options: [OptionWithStats!]!
+  hasVoted: Boolean! # 사용자가 투표에 참여했는지 여부
+}
+
+type Option {
+  id: ID!
+  content: String!
+}
+
+# 새로 추가하는 쿼리 타입
+type VoteQuery {
+  getAllVotes: [VotePayload!]!
+  getVoteById(id: ID!): VoteDetailPayload!
+  getMostPopularOpenVote: [VotePayload!]! # 반환 타입을 리스트로 변경
+  getLeastPopularOpenVote: VotePayload
+}
+
+# 투표 상세 정보를 위한 타입
+type VoteDetailPayload {
+  id: ID!
+  title: String!
+  category: String!
+  status: String!
+  createdBy: String
+  finishedAt: String!
+  totalResponses: Int!
+  options: [OptionWithStats!]!
+  hasVoted: Boolean! # 사용자가 투표에 참여했는지 여부
+}
+
+# 통계 정보가 포함된 옵션 타입
+type OptionWithStats {
+  id: ID!
+  content: String!
+  responseCount: Int!
+  percentage: Float!
+}

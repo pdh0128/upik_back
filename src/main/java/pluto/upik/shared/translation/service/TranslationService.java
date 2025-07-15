@@ -1,26 +1,33 @@
 package pluto.upik.shared.translation.service;
 
+import com.google.cloud.translate.Translate;
+import com.google.cloud.translate.TranslateOptions;
+import com.google.cloud.translate.Translation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
-import org.springframework.http.MediaType;
-
-import java.util.Map;
-
 /**
  * 번역 서비스
  * 한국어와 영어 간의 번역 기능을 제공합니다.
+ * Google Cloud Translation API를 사용합니다.
  */
 @Service
 @Slf4j
 public class TranslationService {
 
-    private final RestClient restClient;
+    private final Translate translate;
 
-    public TranslationService() {
-        this.restClient = RestClient.builder()
-                .baseUrl("https://api.mymemory.translated.net")
-                .build();
+    public TranslationService(@Value("${google.cloud.translation.api-key:}") String apiKey) {
+        // API 키가 제공된 경우 사용, 그렇지 않으면 기본 인증 사용
+        if (apiKey != null && !apiKey.isEmpty()) {
+            this.translate = TranslateOptions.newBuilder()
+                    .setApiKey(apiKey)
+                    .build()
+                    .getService();
+        } else {
+            // 기본 인증 사용 (환경 변수 GOOGLE_APPLICATION_CREDENTIALS에 지정된 서비스 계정 키 파일 사용)
+            this.translate = TranslateOptions.getDefaultInstance().getService();
+        }
     }
 
     /**
@@ -67,26 +74,16 @@ public class TranslationService {
      */
     private String translate(String text, String sourceLang, String targetLang) {
         try {
-            Map<String, Object> response = restClient.get()
-                    .uri(uriBuilder -> uriBuilder
-                            .path("/get")
-                            .queryParam("q", text)
-                            .queryParam("langpair", sourceLang + "|" + targetLang)
-                            .build())
-                    .retrieve()
-                    .body(Map.class);
+            // Google Cloud Translation API를 사용하여 번역
+            Translation translation = translate.translate(
+                    text,
+                    Translate.TranslateOption.sourceLanguage(sourceLang),
+                    Translate.TranslateOption.targetLanguage(targetLang)
+            );
 
-            if (response != null && response.containsKey("responseData")) {
-                Map<String, Object> responseData = (Map<String, Object>) response.get("responseData");
-                if (responseData != null && responseData.containsKey("translatedText")) {
-                    String translatedText = (String) responseData.get("translatedText");
-                    log.debug("번역 완료: {}", translatedText);
-                    return translatedText;
-                }
-            }
-            
-            log.error("번역 응답이 올바르지 않습니다: {}", response);
-            return text; // 번역 실패 시 원본 텍스트 반환
+            String translatedText = translation.getTranslatedText();
+            log.debug("번역 완료: {}", translatedText);
+            return translatedText;
         } catch (Exception e) {
             log.error("번역 API 호출 중 오류 발생", e);
             return text; // 번역 실패 시 원본 텍스트 반환

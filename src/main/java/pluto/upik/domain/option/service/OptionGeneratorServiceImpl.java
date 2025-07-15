@@ -160,23 +160,24 @@ public class OptionGeneratorServiceImpl implements OptionGeneratorServiceInterfa
      */
     private String buildPrompt(String title, int count) {
         return String.format(
-                "You are a poll option generator.\n" +
-                        "Generate exactly %d short and distinct options for the poll titled: \"%s\"\n\n" +
+                "You are a poll option generator.\\n" +
+                        "Generate exactly %d short and distinct options for the poll titled: \"%s\"\\n\\n" +
 
-                        "Rules:\n" +
-                        "- Each option: 1~10 characters long (including spaces)\n" +
-                        "- No explanations, no sentences, no extra text\n" +
-                        "- Only specific, popular, diverse answers\n" +
-                        "- Use nouns only (e.g., 'Pizza', 'Seoul')\n\n" +
+                        "Rules:\\n" +
+                        "- Each option: 1~10 characters long (including spaces)\\n" +
+                        "- No explanations, no sentences, no extra text\\n" +
+                        "- Only specific, popular, diverse answers\\n" +
+                        "- Use nouns only (e.g., 'Pizza', 'Seoul')\\n\\n" +
 
-                        "Format:\n" +
-                        "1. Option\n" +
-                        "2. Option\n" +
-                        "...\n\n" +
+                        "Format:\\n" +
+                        "1. Option\\n" +
+                        "2. Option\\n" +
+                        "...\\n\\n" +
 
                         "Respond ONLY with the numbered list.",
                 count, title
         );
+
 
     }
 
