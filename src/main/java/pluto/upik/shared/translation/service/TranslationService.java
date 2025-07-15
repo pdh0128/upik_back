@@ -6,6 +6,7 @@ import com.google.cloud.translate.Translation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
 /**
  * 번역 서비스
  * 한국어와 영어 간의 번역 기능을 제공합니다.
@@ -74,7 +75,6 @@ public class TranslationService {
      */
     private String translate(String text, String sourceLang, String targetLang) {
         try {
-            // Google Cloud Translation API를 사용하여 번역
             Translation translation = translate.translate(
                     text,
                     Translate.TranslateOption.sourceLanguage(sourceLang),

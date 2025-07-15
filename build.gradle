@@ -36,8 +36,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
 
-    // Swagger UI
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.4.0'
+    // Swagger UI - 버전 업데이트 또는 제거
+    // implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.4.0'
+
+    // 아래 두 가지 방법 중 하나를 선택하세요:
+
+    // 방법 1: 최신 버전으로 업데이트 (2.5.0 이상)
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+    // 방법 2: 라이브러리 제거 (주석 처리)
+    // (주석 처리된 상태)
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'

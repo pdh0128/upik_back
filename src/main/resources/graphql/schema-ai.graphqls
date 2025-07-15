@@ -1,0 +1,15 @@
+extend type Mutation {
+    generateAIGuide(voteId: ID!, voteCategory: String!): GuideResponse
+}
+
+type GuideResponse {
+    id: ID
+    voteId: ID
+    title: String
+    content: String
+    createdAt: String
+    category: String
+    guideType: String
+    revoteCount: Int
+    like: Int
+}
