@@ -394,22 +394,87 @@ public class ReportService implements ReportServiceInterface {
 
         // targetType 결정: 가이드에 존재하면 "guide", 아니면 "vote"
         String targetType;
+        String targetTitle = null;
+        String authorId = null;
+        String authorName = null;
+        String authorProfileImage = null; // 프로필 이미지 필드 (User 클래스에 없음)
+        String category = null;
+        String guideType = null;
+        Long likeCount = null;
+        Long revoteCount = null;
+        LocalDate targetCreatedAt = null;
+        String content = null;
+        String status = null;
+
         if(guideRepository.existsById(report.getTargetId())) {
             targetType = "guide";
+            // 가이드 정보 가져오기
+            Guide guide = guideRepository.findById(report.getTargetId()).orElse(null);
+            if(guide != null) {
+                targetTitle = guide.getTitle();
+                category = guide.getCategory();
+                guideType = guide.getGuideType();
+                likeCount = guide.getLike();
+                revoteCount = guide.getRevoteCount();
+                targetCreatedAt = guide.getCreatedAt();
+                content = guide.getContent();
+
+                // 가이드는 투표와 연결되어 있으므로 투표 작성자를 가져옴
+                if(guide.getVote() != null && guide.getVote().getUser() != null) {
+                    authorId = guide.getVote().getUser().getId().toString();
+                    authorName = guide.getVote().getUser().getName();
+                    // User 클래스에 getProfileImage 메서드가 없으므로 제거
+                    // authorProfileImage = guide.getVote().getUser().getProfileImage();
+                }
+            }
         } else {
             targetType = "vote";
+            // 투표 정보 가져오기
+            Vote vote = voteRepository.findById(report.getTargetId()).orElse(null);
+            if(vote != null) {
+                targetTitle = vote.getQuestion();
+                category = vote.getCategory();
+                // Vote 클래스에 getCreatedAt 메서드가 없으므로 제거
+                // targetCreatedAt = vote.getCreatedAt();
+                status = vote.getStatus().name();
+
+                if(vote.getUser() != null) {
+                    authorId = vote.getUser().getId().toString();
+                    authorName = vote.getUser().getName();
+                    // User 클래스에 getProfileImage 메서드가 없으므로 제거
+                    // authorProfileImage = vote.getUser().getProfileImage();
+                }
+
+                // 투표 옵션들도 가져오기
+                List<String> options = optionRepository.findByVoteId(report.getTargetId())
+                    .stream()
+                    .map(option -> option.getContent())
+                    .collect(Collectors.toList());
+
+                content = String.join(", ", options);
+            }
         }
 
-        ReportResponse response = new ReportResponse(
-                report.getUserId(),
-                report.getTargetId(),
-                report.getReason(),
-                targetType, // 결정된 targetType 설정
-                report.getCreatedAt()
-        );
-
-        log.debug("Report 엔티티 변환 완료 - reportId: {}, targetType: {}, response: {}",
-                report.getUserId(), targetType, response);
+        ReportResponse response = ReportResponse.builder()
+                .userId(report.getUserId())
+                .targetId(report.getTargetId())
+                .reason(report.getReason())
+                .targetType(targetType)
+                .createdAt(report.getCreatedAt())
+                .targetTitle(targetTitle)
+                .authorId(authorId)
+                .authorName(authorName)
+                .authorProfileImage(authorProfileImage) // null이 될 수 있음
+                .category(category)
+                .guideType(guideType)
+                .likeCount(likeCount)
+                .revoteCount(revoteCount)
+                .targetCreatedAt(targetCreatedAt) // Vote의 경우 null이 될 수 있음
+                .content(content)
+                .status(status)
+                .build();
+        log.debug("Report 엔티티 변환 완료 - reportId: {}, targetType: {}, guideType: {}",
+                report.getUserId(), targetType, guideType);
         return response;
     }
 }

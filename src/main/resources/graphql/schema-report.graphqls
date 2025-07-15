@@ -30,19 +30,28 @@ type ReportMutation {
     acceptQuestionReport(questionId: ID!, userId: ID): QuestionReportPayload!
 }
 
-# 신고 데이터 타입
+# 신고 데이터 타입 - 확장된 버전
 type Report {
-    userId: ID!       # 신고자 ID
-    targetId: ID!     # 신고 대상 ID
-    reason: String!   # 신고 이유
-    targetType:String!
-    createdAt: String! # 신고 생성 날짜 (ISO 8601 형식)
+    userId: ID!             # 신고자 ID
+    targetId: ID!           # 신고 대상 ID
+    reason: String!         # 신고 이유
+    targetType: String!     # 신고 대상 타입 (guide 또는 vote)
+    createdAt: String!      # 신고 생성 날짜 (ISO 8601 형식)
+    targetTitle: String     # 신고 대상의 제목 (가이드 제목 또는 투표 질문)
+    authorId: String        # 신고 대상의 작성자 ID
+    authorName: String      # 신고 대상의 작성자 이름
+    category: String        # 신고 대상의 카테고리
+    guideType: String       # 가이드 타입 (targetType이 guide인 경우)
+    likeCount: Int          # 좋아요 수 (targetType이 guide인 경우)
+    revoteCount: Int        # 재투표 수 (targetType이 guide인 경우)
+    targetCreatedAt: String # 대상 생성 일자
+    content: String         # 가이드 내용 (targetType이 guide인 경우)
 }
-
 # 신고 거부 응답 타입
 type RejectReportPayload {
     message: String!
 }
+
 # 신고 접수 응답 타입
 type SubmitReportPayload {
     success: Boolean! # 신고 접수 성공 여부

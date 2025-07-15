@@ -2314,3 +2314,1186 @@ Caused by: java.lang.NoSuchMethodError: 'void org.springframework.web.method.Con
 2025-07-15 11:41:42.156 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-07-15 11:41:42.161 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-07-15 11:41:42.206 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 11:43:22.021 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 36606 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 11:43:22.021 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 11:43:22.545 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 11:43:22.632 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 10 JPA repository interfaces.
+2025-07-15 11:43:22.926 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 11:43:22.933 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 11:43:22.934 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 11:43:22.934 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 11:43:22.977 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 11:43:22.977 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 937 ms
+2025-07-15 11:43:23.049 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 11:43:24.255 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@56266bda
+2025-07-15 11:43:24.258 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 11:43:24.519 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 11:43:25.458 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 11:43:25.567 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 11:43:26.197 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 11:43:26.360 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 11:43:26.602 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 11:43:26.695 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 11:43:26.708 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 11:43:26.944 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 11:43:26.954 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 11:43:26.963 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.212 seconds (process running for 11.344)
+2025-07-15 11:43:46.210 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 11:43:46.211 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 11:43:46.214 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-07-15 11:43:46.734 [http-nio-8080-exec-1] INFO  p.upik.shared.ai.service.AIService - 새 요청 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:43:48.042 [http-nio-8080-exec-1] INFO  p.upik.shared.ai.service.AIService - 요청 종료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:43:48.457 [http-nio-8080-exec-1] ERROR o.s.g.e.ExceptionResolversExceptionHandler - Unresolved ResourceNotFoundException for executionId 6f06450b-e755-b65f-0f0b-2a231eb1a43c
+pluto.upik.shared.exception.ResourceNotFoundException: Tail 질문이 없습니다.
+	at pluto.upik.shared.ai.service.AIService.lambda$generateAndSaveGuide$1(AIService.java:248)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at pluto.upik.shared.ai.service.AIService.generateAndSaveGuide(AIService.java:248)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at pluto.upik.shared.ai.service.AIService$$SpringCGLIB$$0.generateAndSaveGuide(<generated>)
+	at pluto.upik.shared.ai.resolver.AIMutationResolver.generateAIGuide(AIMutationResolver.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.graphql.data.method.InvocableHandlerMethodSupport.doInvoke(InvocableHandlerMethodSupport.java:117)
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.validateAndInvoke(DataFetcherHandlerMethod.java:142)
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.invoke(DataFetcherHandlerMethod.java:125)
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.invoke(DataFetcherHandlerMethod.java:103)
+	at org.springframework.graphql.data.method.annotation.support.AnnotatedControllerConfigurer$SchemaMappingDataFetcher.get(AnnotatedControllerConfigurer.java:521)
+	at org.springframework.graphql.execution.ContextDataFetcherDecorator.lambda$get$0(ContextDataFetcherDecorator.java:92)
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$1(ContextSnapshot.java:106)
+	at org.springframework.graphql.execution.ContextDataFetcherDecorator.get(ContextDataFetcherDecorator.java:92)
+	at graphql.execution.ExecutionStrategy.invokeDataFetcher(ExecutionStrategy.java:510)
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:464)
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:404)
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:363)
+	at graphql.execution.AsyncSerialExecutionStrategy.resolveSerialField(AsyncSerialExecutionStrategy.java:73)
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$0(AsyncSerialExecutionStrategy.java:57)
+	at graphql.execution.Async.eachSequentiallyPolymorphicImpl(Async.java:329)
+	at graphql.execution.Async.eachSequentially(Async.java:317)
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:52)
+	at graphql.execution.Execution.executeOperation(Execution.java:205)
+	at graphql.execution.Execution.execute(Execution.java:124)
+	at graphql.GraphQL.execute(GraphQL.java:549)
+	at graphql.GraphQL.lambda$parseValidateAndExecute$13(GraphQL.java:479)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1187)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2341)
+	at graphql.EngineRunningState.compose(EngineRunningState.java:87)
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:474)
+	at graphql.GraphQL.lambda$executeAsync$9(GraphQL.java:434)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1187)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2341)
+	at graphql.EngineRunningState.compose(EngineRunningState.java:87)
+	at graphql.GraphQL.lambda$executeAsync$10(GraphQL.java:423)
+	at graphql.EngineRunningState.call(EngineRunningState.java:198)
+	at graphql.GraphQL.executeAsync(GraphQL.java:416)
+	at org.springframework.graphql.execution.DefaultExecutionGraphQlService.lambda$execute$4(DefaultExecutionGraphQlService.java:98)
+	at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:47)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4641)
+	at reactor.core.publisher.Mono.toFuture(Mono.java:5153)
+	at org.springframework.graphql.server.webmvc.GraphQlHttpHandler.prepareResponse(GraphQlHttpHandler.java:119)
+	at org.springframework.graphql.server.webmvc.AbstractGraphQlHttpHandler.handleRequest(AbstractGraphQlHttpHandler.java:137)
+	at org.springframework.web.servlet.function.support.HandlerFunctionAdapter.handle(HandlerFunctionAdapter.java:108)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:59)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:202)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.ui.DefaultResourcesFilter.doFilter(DefaultResourcesFilter.java:72)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at pluto.upik.shared.jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:235)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-15 11:45:01.953 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 새 요청 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:03.309 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 요청 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:03.310 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 질문 번역 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:04.409 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 질문 번역 완료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:04.409 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 호출 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:04.564 [http-nio-8080-exec-3] ERROR i.n.r.d.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2025-07-15 11:45:35.022 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 호출 완료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:35.023 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 응답 처리 완료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:35.023 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 제목 번역 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:35.282 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 제목 번역 완료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:35.282 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 내용 번역 시작: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:36.505 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 내용 번역 완료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:45:36.542 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 요청 종료: 71003e22-cd54-4168-96ab-0970b3f96d4b-재미
+2025-07-15 11:47:05.904 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 새 요청 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:07.262 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - AI 요청 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:07.262 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 질문 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:07.746 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 질문 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:07.746 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - AI 호출 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:10.637 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 새 요청 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:23.598 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - AI 호출 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:23.600 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - AI 응답 처리 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:23.600 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 제목 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:23.955 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 제목 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:23.955 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 내용 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:24.386 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 내용 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:24.411 [http-nio-8080-exec-5] INFO  p.upik.shared.ai.service.AIService - 요청 종료: 51fe4620-e445-4cc8-94fc-af44ecffc334-재미
+2025-07-15 11:47:25.568 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - AI 요청 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:25.568 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 질문 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:25.900 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 질문 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:25.900 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - AI 호출 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:46.689 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 이전 요청 취소: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:46.690 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 새 요청 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:47.910 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 요청 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:47.910 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 질문 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:48.558 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 질문 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:48.558 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 호출 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:53.740 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - AI 호출 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:53.756 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - AI 응답 처리 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:53.756 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 제목 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:54.129 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 제목 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:54.132 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 내용 번역 시작: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:54.287 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 내용 번역 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:47:54.425 [http-nio-8080-exec-6] INFO  p.upik.shared.ai.service.AIService - 요청 종료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:48:20.390 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - AI 호출 완료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:48:20.391 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 요청이 취소되었습니다: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:48:20.397 [http-nio-8080-exec-3] INFO  p.upik.shared.ai.service.AIService - 요청 종료: 51fe4620-e445-4cc8-94fc-af44ecffc334-진지
+2025-07-15 11:48:20.794 [http-nio-8080-exec-3] ERROR o.s.g.e.ExceptionResolversExceptionHandler - Unresolved BusinessException for executionId d0b5b55f-7003-45cc-2afd-729e81c4106d
+pluto.upik.shared.exception.BusinessException: 요청이 취소되었습니다
+	at pluto.upik.shared.ai.service.AIService.checkCancellation(AIService.java:151)
+	at pluto.upik.shared.ai.service.AIService.askToDeepSeekAI(AIService.java:181)
+	at pluto.upik.shared.ai.service.AIService.generateAndSaveGuide(AIService.java:277)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at pluto.upik.shared.ai.service.AIService$$SpringCGLIB$$0.generateAndSaveGuide(<generated>)
+	at pluto.upik.shared.ai.resolver.AIMutationResolver.generateAIGuide(AIMutationResolver.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.graphql.data.method.InvocableHandlerMethodSupport.doInvoke(InvocableHandlerMethodSupport.java:117)
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.validateAndInvoke(DataFetcherHandlerMethod.java:142)
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.invoke(DataFetcherHandlerMethod.java:125)
+	at org.springframework.graphql.data.method.annotation.support.DataFetcherHandlerMethod.invoke(DataFetcherHandlerMethod.java:103)
+	at org.springframework.graphql.data.method.annotation.support.AnnotatedControllerConfigurer$SchemaMappingDataFetcher.get(AnnotatedControllerConfigurer.java:521)
+	at org.springframework.graphql.execution.ContextDataFetcherDecorator.lambda$get$0(ContextDataFetcherDecorator.java:92)
+	at io.micrometer.context.ContextSnapshot.lambda$wrap$1(ContextSnapshot.java:106)
+	at org.springframework.graphql.execution.ContextDataFetcherDecorator.get(ContextDataFetcherDecorator.java:92)
+	at graphql.execution.ExecutionStrategy.invokeDataFetcher(ExecutionStrategy.java:510)
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:464)
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:404)
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:363)
+	at graphql.execution.AsyncSerialExecutionStrategy.resolveSerialField(AsyncSerialExecutionStrategy.java:73)
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$0(AsyncSerialExecutionStrategy.java:57)
+	at graphql.execution.Async.eachSequentiallyPolymorphicImpl(Async.java:329)
+	at graphql.execution.Async.eachSequentially(Async.java:317)
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:52)
+	at graphql.execution.Execution.executeOperation(Execution.java:205)
+	at graphql.execution.Execution.execute(Execution.java:124)
+	at graphql.GraphQL.execute(GraphQL.java:549)
+	at graphql.GraphQL.lambda$parseValidateAndExecute$13(GraphQL.java:479)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1187)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2341)
+	at graphql.EngineRunningState.compose(EngineRunningState.java:87)
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:474)
+	at graphql.GraphQL.lambda$executeAsync$9(GraphQL.java:434)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1187)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2341)
+	at graphql.EngineRunningState.compose(EngineRunningState.java:87)
+	at graphql.GraphQL.lambda$executeAsync$10(GraphQL.java:423)
+	at graphql.EngineRunningState.call(EngineRunningState.java:198)
+	at graphql.GraphQL.executeAsync(GraphQL.java:416)
+	at org.springframework.graphql.execution.DefaultExecutionGraphQlService.lambda$execute$4(DefaultExecutionGraphQlService.java:98)
+	at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:47)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4641)
+	at reactor.core.publisher.Mono.toFuture(Mono.java:5153)
+	at org.springframework.graphql.server.webmvc.GraphQlHttpHandler.prepareResponse(GraphQlHttpHandler.java:119)
+	at org.springframework.graphql.server.webmvc.AbstractGraphQlHttpHandler.handleRequest(AbstractGraphQlHttpHandler.java:137)
+	at org.springframework.web.servlet.function.support.HandlerFunctionAdapter.handle(HandlerFunctionAdapter.java:108)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:59)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:202)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.ui.DefaultResourcesFilter.doFilter(DefaultResourcesFilter.java:72)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at pluto.upik.shared.jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:235)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-07-15 11:48:57.547 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 11:48:57.556 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 11:48:59.672 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 11:48:59.672 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 11:48:59.676 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 11:48:59.689 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 11:48:59.845 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 13:54:57.469 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 40822 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 13:54:57.470 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 13:54:57.977 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 13:54:58.067 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 10 JPA repository interfaces.
+2025-07-15 13:54:58.367 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 13:54:58.375 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 13:54:58.376 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 13:54:58.376 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 13:54:58.410 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 13:54:58.410 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 921 ms
+2025-07-15 13:54:58.489 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 13:54:59.727 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@53b7bf01
+2025-07-15 13:54:59.729 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 13:54:59.983 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 13:55:00.927 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 13:55:01.043 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 13:55:01.682 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 13:55:01.832 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 13:55:02.074 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 13:55:02.170 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 13:55:02.187 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 13:55:02.416 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 13:55:02.427 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 13:55:02.435 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.224 seconds (process running for 10.876)
+2025-07-15 13:55:12.623 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 13:55:12.623 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 13:55:12.627 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-07-15 14:03:47.058 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 14:03:47.066 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 14:03:47.116 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 14:03:47.116 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 14:03:47.119 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 14:03:47.134 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 14:03:47.173 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 14:06:38.970 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 41207 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 14:06:38.971 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 14:06:39.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 14:06:39.599 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 10 JPA repository interfaces.
+2025-07-15 14:06:39.901 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 14:06:39.909 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 14:06:39.909 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 14:06:39.909 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 14:06:39.947 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 14:06:39.947 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 953 ms
+2025-07-15 14:06:40.019 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 14:06:41.199 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@18dac12f
+2025-07-15 14:06:41.200 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 14:06:41.466 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 14:06:42.419 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 14:06:42.534 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 14:06:43.181 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 14:06:43.369 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 14:06:43.612 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 14:06:43.713 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 14:06:43.726 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 14:06:43.970 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 14:06:43.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 14:06:44.002 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.305 seconds (process running for 10.93)
+2025-07-15 14:06:49.645 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 14:06:49.645 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 14:06:49.655 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2025-07-15 14:07:18.747 [http-nio-8080-exec-1] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 14:07:18.762 [http-nio-8080-exec-1] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 14:07:18.763 [http-nio-8080-exec-1] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 14:07:18.763 [http-nio-8080-exec-1] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 14:07:19.821 [http-nio-8080-exec-1] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 14:07:21.342 [http-nio-8080-exec-1] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, response: ReportResponse{userId=e49207e8-471a-11f0-937c-42010a800003, targetId=1d3336f8-471b-11f0-937c-42010a800003, reason='책읽기 싫어요...', targetType='vote', targetTitle='이번 달 독서 모임 도서 선정...', authorId='e49207e8-471a-11f0-937c-42010a800003', category='진지', createdAt=2025-06-30}
+2025-07-15 14:07:21.346 [http-nio-8080-exec-1] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 14:07:23.020 [http-nio-8080-exec-1] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, response: ReportResponse{userId=e49207e8-471a-11f0-937c-42010a800003, targetId=f6c47358-3135-4153-a4f3-49168cfc3082, reason='배고파서...', targetType='guide', targetTitle='점심 추천: 한국식 vs. 중국식...', authorId='e49207e8-471a-11f0-937c-42010a800003', category='재미', createdAt=2025-06-30}
+2025-07-15 14:07:23.020 [http-nio-8080-exec-1] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 14:07:23.020 [http-nio-8080-exec-1] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 14:07:23.020 [http-nio-8080-exec-1] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 14:14:31.950 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 14:14:31.963 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 14:14:32.038 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 14:14:32.038 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 14:14:32.041 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 14:14:32.047 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 14:14:32.084 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 14:14:40.841 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 41379 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 14:14:40.842 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 14:14:41.915 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 14:14:42.127 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 207 ms. Found 10 JPA repository interfaces.
+2025-07-15 14:14:43.059 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 14:14:43.067 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 14:14:43.068 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 14:14:43.069 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 14:14:43.117 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 14:14:43.117 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2218 ms
+2025-07-15 14:14:43.247 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 14:14:44.720 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@54b44879
+2025-07-15 14:14:44.723 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 14:14:45.029 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 14:14:45.998 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 14:14:46.126 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 14:14:46.868 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 14:14:47.081 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 14:14:47.363 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 14:14:47.472 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 14:14:47.489 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 14:14:47.757 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 14:14:47.771 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 14:14:47.782 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 7.215 seconds (process running for 13.113)
+2025-07-15 14:15:25.312 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 14:15:25.313 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 14:15:25.323 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2025-07-15 14:15:44.908 [http-nio-8080-exec-6] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 요청: 제목=점심
+2025-07-15 14:15:44.909 [http-nio-8080-exec-6] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 시작 - 제목: 점심
+2025-07-15 14:15:44.909 [http-nio-8080-exec-6] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 요청 시작 - keyword: 점심
+2025-07-15 14:15:45.422 [http-nio-8080-exec-6] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 결과 - keyword: 점심, 검색된 가이드 수: 2
+2025-07-15 14:15:45.422 [http-nio-8080-exec-6] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 완료 - keyword: 점심, 결과 개수: 2
+2025-07-15 14:15:45.423 [http-nio-8080-exec-6] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 완료 - 찾은 가이드 수: 2, 제목: 점심, 소요시간: 514ms
+2025-07-15 14:15:45.424 [http-nio-8080-exec-6] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 완료: 제목=점심, 찾은 가이드 수=2
+2025-07-15 14:16:10.352 [http-nio-8080-exec-8] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 14:16:10.356 [http-nio-8080-exec-8] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 14:16:10.357 [http-nio-8080-exec-8] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 14:16:10.359 [http-nio-8080-exec-8] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 14:16:11.372 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 14:16:12.892 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, response: ReportResponse{userId=e49207e8-471a-11f0-937c-42010a800003, targetId=1d3336f8-471b-11f0-937c-42010a800003, reason='책읽기 싫어요...', targetType='vote', targetTitle='이번 달 독서 모임 도서 선정...', authorId='e49207e8-471a-11f0-937c-42010a800003', category='진지', createdAt=2025-06-30}
+2025-07-15 14:16:12.895 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 14:16:14.567 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, response: ReportResponse{userId=e49207e8-471a-11f0-937c-42010a800003, targetId=f6c47358-3135-4153-a4f3-49168cfc3082, reason='배고파서...', targetType='guide', targetTitle='점심 추천: 한국식 vs. 중국식...', authorId='e49207e8-471a-11f0-937c-42010a800003', category='재미', createdAt=2025-06-30}
+2025-07-15 14:16:14.567 [http-nio-8080-exec-8] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 14:16:14.567 [http-nio-8080-exec-8] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 14:16:14.567 [http-nio-8080-exec-8] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 14:26:07.689 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 14:26:07.745 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 14:26:07.948 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 14:26:07.948 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 14:26:07.951 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 14:26:07.958 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 14:26:07.997 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 14:56:07.772 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 45347 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 14:56:07.772 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 14:56:08.291 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 14:56:08.378 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 10 JPA repository interfaces.
+2025-07-15 14:56:08.681 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 14:56:08.689 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 14:56:08.690 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 14:56:08.690 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 14:56:08.726 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 14:56:08.726 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 936 ms
+2025-07-15 14:56:08.797 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 14:56:09.990 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@67b8d45
+2025-07-15 14:56:09.993 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 14:56:10.288 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 14:56:11.509 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 14:56:11.829 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 14:56:12.735 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 14:56:12.893 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 14:56:13.222 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 14:56:13.328 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 14:56:13.342 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 14:56:13.613 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 14:56:13.626 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 14:56:13.635 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 6.128 seconds (process running for 11.725)
+2025-07-15 14:56:27.787 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 14:56:27.787 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 14:56:27.791 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-07-15 14:56:45.992 [http-nio-8080-exec-6] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 14:56:46.003 [http-nio-8080-exec-6] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 14:56:46.003 [http-nio-8080-exec-6] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 14:56:46.003 [http-nio-8080-exec-6] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 14:56:47.083 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 14:56:49.037 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, guideType: null
+2025-07-15 14:56:49.037 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 14:56:50.730 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, guideType: string
+2025-07-15 14:56:50.730 [http-nio-8080-exec-6] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 14:56:50.730 [http-nio-8080-exec-6] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 14:56:50.730 [http-nio-8080-exec-6] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 14:57:24.610 [http-nio-8080-exec-8] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 요청: 제목=재미
+2025-07-15 14:57:24.614 [http-nio-8080-exec-8] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 시작 - 제목: 재미
+2025-07-15 14:57:24.614 [http-nio-8080-exec-8] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 요청 시작 - keyword: 재미
+2025-07-15 14:57:25.021 [http-nio-8080-exec-8] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 결과 - keyword: 재미, 검색된 가이드 수: 1
+2025-07-15 14:57:25.398 [http-nio-8080-exec-8] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 완료 - keyword: 재미, 결과 개수: 1
+2025-07-15 14:57:25.402 [http-nio-8080-exec-8] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 완료 - 찾은 가이드 수: 1, 제목: 재미, 소요시간: 788ms
+2025-07-15 14:57:25.404 [http-nio-8080-exec-8] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 완료: 제목=재미, 찾은 가이드 수=1
+2025-07-15 15:01:28.738 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 15:01:28.757 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 15:01:28.811 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:01:28.811 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:01:28.814 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:01:28.819 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:01:28.862 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:01:37.964 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 45480 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:01:37.965 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:01:38.497 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:01:38.585 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:01:38.906 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:01:38.916 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:01:38.917 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:01:38.917 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:01:38.958 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:01:38.958 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 975 ms
+2025-07-15 15:01:39.051 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:01:40.244 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36cfe107
+2025-07-15 15:01:40.246 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:01:40.532 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:01:41.803 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:01:41.949 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:01:42.640 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:01:42.890 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:01:43.164 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:01:43.291 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:01:43.306 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:01:43.600 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:01:43.616 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 15:01:43.626 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.904 seconds (process running for 11.427)
+2025-07-15 15:01:45.831 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 15:01:45.831 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 15:01:45.834 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-07-15 15:04:03.512 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 15:04:03.522 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 15:04:03.563 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:04:03.563 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:04:03.566 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:04:03.571 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:04:03.610 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:04:17.124 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 45578 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:04:17.125 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:04:17.962 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:04:18.166 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:04:18.506 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:04:18.514 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:04:18.515 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:04:18.515 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:04:18.563 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:04:18.563 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1414 ms
+2025-07-15 15:04:18.645 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:04:23.945 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36cfe107
+2025-07-15 15:04:23.966 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:04:24.333 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:04:25.626 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:04:25.750 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:04:26.458 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:04:26.655 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:04:26.938 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:04:27.054 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:04:27.070 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:04:27.360 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:04:27.373 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 15:04:27.384 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 10.57 seconds (process running for 16.039)
+2025-07-15 15:04:29.915 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 15:04:29.915 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 15:04:29.918 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-07-15 15:04:47.523 [http-nio-8080-exec-6] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 요청: 제목=점심
+2025-07-15 15:04:47.524 [http-nio-8080-exec-6] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 시작 - 제목: 점심
+2025-07-15 15:04:47.524 [http-nio-8080-exec-6] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 요청 시작 - keyword: 점심
+2025-07-15 15:04:48.394 [http-nio-8080-exec-6] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 결과 - keyword: 점심, 검색된 가이드 수: 2
+2025-07-15 15:04:49.088 [http-nio-8080-exec-6] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 완료 - keyword: 점심, 결과 개수: 2
+2025-07-15 15:04:49.091 [http-nio-8080-exec-6] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 완료 - 제목: '점심', 결과 개수: 2, 첫 번째 가이드 타입: 'string'
+2025-07-15 15:04:49.092 [http-nio-8080-exec-6] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 완료 - 찾은 가이드 수: 2, 제목: 점심, 소요시간: 1568ms
+2025-07-15 15:04:49.093 [http-nio-8080-exec-6] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 완료: 제목=점심, 찾은 가이드 수=2
+2025-07-15 15:05:27.920 [http-nio-8080-exec-8] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 요청: 제목=한국인
+2025-07-15 15:05:27.921 [http-nio-8080-exec-8] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 시작 - 제목: 한국인
+2025-07-15 15:05:27.921 [http-nio-8080-exec-8] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 요청 시작 - keyword: 한국인
+2025-07-15 15:05:31.090 [http-nio-8080-exec-8] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 결과 - keyword: 한국인, 검색된 가이드 수: 0
+2025-07-15 15:05:31.091 [http-nio-8080-exec-8] WARN  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 실패 - 가이드 없음 (keyword: 한국인)
+2025-07-15 15:05:31.093 [http-nio-8080-exec-8] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 결과 없음 - 제목: '한국인', 사유: 해당 키워드로 검색된 가이드가 없습니다: 한국인
+2025-07-15 15:05:31.093 [http-nio-8080-exec-8] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 완료: 제목=한국인, 찾은 가이드 수=0
+2025-07-15 15:05:39.247 [http-nio-8080-exec-10] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 요청: 제목=한국인
+2025-07-15 15:05:39.248 [http-nio-8080-exec-10] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 시작 - 제목: 한국인
+2025-07-15 15:05:39.248 [http-nio-8080-exec-10] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 요청 시작 - keyword: 한국인
+2025-07-15 15:05:42.569 [http-nio-8080-exec-10] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 결과 - keyword: 한국인, 검색된 가이드 수: 0
+2025-07-15 15:05:42.570 [http-nio-8080-exec-10] WARN  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 실패 - 가이드 없음 (keyword: 한국인)
+2025-07-15 15:05:42.570 [http-nio-8080-exec-10] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 결과 없음 - 제목: '한국인', 사유: 해당 키워드로 검색된 가이드가 없습니다: 한국인
+2025-07-15 15:05:42.570 [http-nio-8080-exec-10] INFO  p.u.d.o.r.OptionGeneratorQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 완료: 제목=한국인, 찾은 가이드 수=0
+2025-07-15 15:05:42.583 [http-nio-8080-exec-10] INFO  p.u.d.o.r.SimilarGuideQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 요청: 제목=한국인
+2025-07-15 15:05:42.583 [http-nio-8080-exec-10] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 시작 - 제목: 한국인
+2025-07-15 15:05:42.583 [http-nio-8080-exec-10] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 요청 시작 - keyword: 한국인
+2025-07-15 15:05:44.531 [http-nio-8080-exec-10] INFO  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 결과 - keyword: 한국인, 검색된 가이드 수: 0
+2025-07-15 15:05:44.531 [http-nio-8080-exec-10] WARN  p.u.d.g.service.KeywordGuideService - 키워드 기반 가이드 검색 실패 - 가이드 없음 (keyword: 한국인)
+2025-07-15 15:05:44.532 [http-nio-8080-exec-10] INFO  p.u.d.o.s.OptionGeneratorServiceImpl - 유사 가이드 검색 결과 없음 - 제목: '한국인', 사유: 해당 키워드로 검색된 가이드가 없습니다: 한국인
+2025-07-15 15:05:44.532 [http-nio-8080-exec-10] INFO  p.u.d.o.r.SimilarGuideQueryResolver - GraphQL 쿼리 - 유사 가이드 검색 결과 없음: 제목=한국인
+2025-07-15 15:05:49.221 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 15:05:49.224 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 15:05:49.246 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:05:49.246 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:05:49.248 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:05:49.251 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:05:49.294 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:16:17.995 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 46313 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:16:17.995 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:16:18.548 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:16:18.643 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:16:18.978 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:16:18.987 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:16:18.987 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:16:18.987 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:16:19.033 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:16:19.033 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1018 ms
+2025-07-15 15:16:19.134 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:16:20.325 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36cfe107
+2025-07-15 15:16:20.327 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:16:20.612 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:16:21.566 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:16:21.713 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:16:22.320 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:16:22.479 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:16:22.722 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:16:22.833 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides], Mutation=[optionGenerator]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:16:22.847 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:16:23.082 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:16:23.097 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 15:16:23.108 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.399 seconds (process running for 11.849)
+2025-07-15 15:16:25.433 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 15:16:25.434 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 15:16:25.438 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-07-15 15:17:29.811 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 15:17:29.817 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 15:17:29.854 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:17:29.855 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:17:29.856 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:17:29.862 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:17:29.899 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:17:37.514 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 46365 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:17:37.514 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:17:38.039 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:17:38.127 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:17:38.421 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:17:38.429 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:17:38.430 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:17:38.430 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:17:38.472 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:17:38.472 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 939 ms
+2025-07-15 15:17:38.545 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:17:39.744 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@16b64a03
+2025-07-15 15:17:39.746 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:17:40.004 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:17:40.945 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:17:41.081 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:17:41.680 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:17:41.834 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:17:42.076 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:17:42.171 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {Report=[userName], GuideMutation=[getUserCreatedGuides], Mutation=[optionGenerator]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:17:42.184 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:17:42.415 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:17:42.426 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 15:17:42.435 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.177 seconds (process running for 10.774)
+2025-07-15 15:17:44.826 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 15:17:44.826 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 15:17:44.829 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-07-15 15:17:49.436 [http-nio-8080-exec-6] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 15:17:49.444 [http-nio-8080-exec-6] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 15:17:49.444 [http-nio-8080-exec-6] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 15:17:49.444 [http-nio-8080-exec-6] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 15:17:50.529 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:17:52.457 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, guideType: null
+2025-07-15 15:17:52.457 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:17:54.145 [http-nio-8080-exec-6] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, guideType: string
+2025-07-15 15:17:54.145 [http-nio-8080-exec-6] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:17:54.145 [http-nio-8080-exec-6] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:17:54.146 [http-nio-8080-exec-6] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 15:19:51.822 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 15:19:51.828 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 15:19:51.860 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:19:51.860 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:19:51.863 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:19:51.870 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:19:51.909 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:19:59.301 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 46468 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:19:59.301 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:19:59.824 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:19:59.914 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:20:00.203 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:20:00.210 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:20:00.211 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:20:00.211 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:20:00.253 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:20:00.253 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 933 ms
+2025-07-15 15:20:00.322 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:20:01.526 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@18bb1b88
+2025-07-15 15:20:01.528 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:20:01.839 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:20:02.788 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:20:02.911 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:20:03.579 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:20:03.732 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:20:03.967 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [pluto/upik/shared/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'routerFunctionMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'graphQlRouterFunction' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlRouterFunction' parameter 0: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+2025-07-15 15:20:03.967 [main] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:20:03.967 [main] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:20:03.968 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:20:03.969 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:20:04.013 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:20:04.015 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-07-15 15:20:04.023 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-15 15:20:04.035 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [pluto/upik/shared/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'routerFunctionMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'graphQlRouterFunction' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlRouterFunction' parameter 0: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at pluto.upik.UpikApplication.main(UpikApplication.java:16)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'routerFunctionMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'graphQlRouterFunction' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlRouterFunction' parameter 0: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'routerFunctionMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'graphQlRouterFunction' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlRouterFunction' parameter 0: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1278)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:126)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:226)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:304)
+	at pluto.upik.shared.config.SecurityConfig.lambda$filterChain$2(SecurityConfig.java:44)
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1491)
+	at pluto.upik.shared.config.SecurityConfig.filterChain(SecurityConfig.java:42)
+	at pluto.upik.shared.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$filterChain$1(<generated>)
+	at pluto.upik.shared.config.SecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:393)
+	at pluto.upik.shared.config.SecurityConfig$$SpringCGLIB$$0.filterChain(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'routerFunctionMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'graphQlRouterFunction' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlRouterFunction' parameter 0: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1426)
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:372)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:135)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 45 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'graphQlRouterFunction' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlRouterFunction' parameter 0: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$1.orderedStream(DefaultListableBeanFactory.java:524)
+	at org.springframework.web.servlet.function.support.RouterFunctionMapping.initRouterFunctions(RouterFunctionMapping.java:152)
+	at org.springframework.web.servlet.function.support.RouterFunctionMapping.afterPropertiesSet(RouterFunctionMapping.java:130)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 58 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'graphQlHttpHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'graphQlHttpHandler' parameter 0: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webGraphQlHandler' defined in class path resource [org/springframework/boot/autoconfigure/graphql/servlet/GraphQlWebMvcAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webGraphQlHandler' parameter 0: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1682)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'executionGraphQlService' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Unsatisfied dependency expressed through method 'executionGraphQlService' parameter 0: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 99 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'graphQlSource' defined in class path resource [org/springframework/boot/autoconfigure/graphql/GraphQlAutoConfiguration.class]: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1682)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 113 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.graphql.execution.GraphQlSource]: Factory method 'graphQlSource' threw exception with message: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 126 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to parse schema resource: file [/Users/upik/build/resources/main/graphql/schema-report.graphqls]
+	at org.springframework.graphql.execution.DefaultSchemaResourceGraphQlSourceBuilder.parse(DefaultSchemaResourceGraphQlSourceBuilder.java:190)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.reduce(ReferencePipeline.java:662)
+	at org.springframework.graphql.execution.DefaultSchemaResourceGraphQlSourceBuilder.initGraphQlSchema(DefaultSchemaResourceGraphQlSourceBuilder.java:140)
+	at org.springframework.graphql.execution.AbstractGraphQlSourceBuilder.build(AbstractGraphQlSourceBuilder.java:116)
+	at org.springframework.boot.autoconfigure.graphql.GraphQlAutoConfiguration.graphQlSource(GraphQlAutoConfiguration.java:120)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 129 common frames omitted
+Caused by: graphql.schema.idl.errors.SchemaProblem: errors=[InvalidSyntaxError{ message=Invalid syntax with offending token '{' at line 48 column 14 ,offendingToken={ ,locations=[SourceLocation{line=48, column=14}] ,sourcePreview=    revoteCount: Int        # 재투표 수 (targetType이 guide인 경우)
+    targetCreatedAt: String # 대상 생성 일자
+    content: String         # 가이드 내용 (targetType이 guide인 경우)
+ ReportQuery {
+    # 현재 사용자가 신고한 목록 조회 (토큰에서 userId 추출)
+    getMyReports: [Report!]! # Non-Nullable 배열
+
+}]
+	at graphql.schema.idl.SchemaParser.handleParseException(SchemaParser.java:131)
+	at graphql.schema.idl.SchemaParser.parseImpl(SchemaParser.java:126)
+	at graphql.schema.idl.SchemaParser.parse(SchemaParser.java:92)
+	at graphql.schema.idl.SchemaParser.parse(SchemaParser.java:77)
+	at graphql.schema.idl.SchemaParser.parse(SchemaParser.java:64)
+	at org.springframework.graphql.execution.DefaultSchemaResourceGraphQlSourceBuilder.parse(DefaultSchemaResourceGraphQlSourceBuilder.java:183)
+	... 143 common frames omitted
+2025-07-15 15:21:35.156 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 46518 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:21:35.156 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:21:35.684 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:21:35.772 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:21:36.060 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:21:36.068 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:21:36.069 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:21:36.069 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:21:36.114 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:21:36.114 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 939 ms
+2025-07-15 15:21:36.185 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:21:37.383 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@78bad03b
+2025-07-15 15:21:37.386 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:21:37.645 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:21:38.619 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:21:38.733 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:21:39.359 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:21:39.521 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:21:39.764 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:21:39.856 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {Report=[userName], GuideMutation=[getUserCreatedGuides], Mutation=[optionGenerator]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:21:39.869 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:21:40.201 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:21:40.212 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 15:21:40.224 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.323 seconds (process running for 11.025)
+2025-07-15 15:21:43.068 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 15:21:43.068 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 15:21:43.073 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2025-07-15 15:21:45.829 [http-nio-8080-exec-5] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 15:21:45.842 [http-nio-8080-exec-5] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 15:21:45.842 [http-nio-8080-exec-5] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 15:21:45.842 [http-nio-8080-exec-5] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 15:21:46.905 [http-nio-8080-exec-5] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:21:48.867 [http-nio-8080-exec-5] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, guideType: null
+2025-07-15 15:21:48.867 [http-nio-8080-exec-5] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:21:50.539 [http-nio-8080-exec-5] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, guideType: string
+2025-07-15 15:21:50.540 [http-nio-8080-exec-5] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:21:50.540 [http-nio-8080-exec-5] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:21:50.540 [http-nio-8080-exec-5] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 15:25:23.372 [http-nio-8080-exec-8] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 15:25:23.373 [http-nio-8080-exec-8] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 15:25:23.373 [http-nio-8080-exec-8] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 15:25:23.373 [http-nio-8080-exec-8] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 15:25:24.352 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:25:26.219 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, guideType: null
+2025-07-15 15:25:26.219 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:25:27.910 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, guideType: string
+2025-07-15 15:25:27.910 [http-nio-8080-exec-8] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:25:27.910 [http-nio-8080-exec-8] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:25:27.910 [http-nio-8080-exec-8] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 15:27:24.552 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 47081 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:27:24.552 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:27:25.057 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:27:25.146 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:27:25.438 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:27:25.446 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:27:25.446 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:27:25.447 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:27:25.482 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:27:25.482 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 911 ms
+2025-07-15 15:27:25.553 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:27:26.733 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@67b8d45
+2025-07-15 15:27:26.735 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:27:26.979 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:27:27.926 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:27:28.064 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:27:28.660 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:27:28.832 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:27:29.077 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:27:29.178 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides], Mutation=[optionGenerator]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:27:29.190 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:27:29.430 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:27:29.440 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-15 15:27:29.442 [main] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:27:29.442 [main] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:27:29.443 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:27:29.444 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:27:30.017 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-07-15 15:27:30.042 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-15 15:27:30.059 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-07-15 15:28:03.812 [main] INFO  pluto.upik.UpikApplication - Starting UpikApplication using Java 21.0.4 with PID 47140 (/Users/upik/build/classes/java/main started by heodongun in /Users/upik)
+2025-07-15 15:28:03.813 [main] INFO  pluto.upik.UpikApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 15:28:04.380 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15 15:28:04.486 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 10 JPA repository interfaces.
+2025-07-15 15:28:04.792 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-07-15 15:28:04.799 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:28:04.799 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-15 15:28:04.799 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-07-15 15:28:04.832 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-15 15:28:04.833 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1001 ms
+2025-07-15 15:28:04.901 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-07-15 15:28:06.105 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36cfe107
+2025-07-15 15:28:06.109 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-07-15 15:28:06.359 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15 15:28:07.337 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:28:07.484 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15 15:28:08.107 [main] WARN  c.g.cloud.translate.TranslateOptions - Ignoring Application Default Credentials GOOGLE_APPLICATION_CREDENTIALS: using explicit setting for API key instead.
+2025-07-15 15:28:08.269 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 15:28:08.505 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 9 resource(s) in the GraphQL schema.
+2025-07-15 15:28:08.597 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {GuideMutation=[getUserCreatedGuides], Mutation=[optionGenerator]}
+	Unmapped registrations: {Mutation.reportMutation=ReportRootResolver#reportMutation[0 args]}
+	Unmapped arguments: {}
+	Skipped types: [GuideQuery, KeywordGuideQuery, VoteResponseQuery, OptionGeneratorQuery, VoteResponseMutation]
+2025-07-15 15:28:08.610 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2025-07-15 15:28:08.851 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-15 15:28:08.861 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-07-15 15:28:08.869 [main] INFO  pluto.upik.UpikApplication - Started UpikApplication in 5.281 seconds (process running for 10.815)
+2025-07-15 15:28:11.025 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-15 15:28:11.025 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-15 15:28:11.029 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-07-15 15:28:33.618 [http-nio-8080-exec-8] DEBUG p.u.d.r.r.ReportRootQueryResolver - GraphQL 신고 쿼리 루트 진입점 호출
+2025-07-15 15:28:33.628 [http-nio-8080-exec-8] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 요청
+2025-07-15 15:28:33.629 [http-nio-8080-exec-8] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 요청
+2025-07-15 15:28:33.631 [http-nio-8080-exec-8] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 요청 시작
+2025-07-15 15:28:34.732 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:28:36.665 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: vote, guideType: null
+2025-07-15 15:28:36.665 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티를 ReportResponse로 변환 중 - reportId: e49207e8-471a-11f0-937c-42010a800003
+2025-07-15 15:28:38.356 [http-nio-8080-exec-8] DEBUG p.u.d.report.service.ReportService - Report 엔티티 변환 완료 - reportId: e49207e8-471a-11f0-937c-42010a800003, targetType: guide, guideType: string
+2025-07-15 15:28:38.356 [http-nio-8080-exec-8] INFO  p.u.d.report.service.ReportService - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:28:38.356 [http-nio-8080-exec-8] INFO  p.u.d.r.a.ReportApplication - 모든 신고 목록 조회 완료 - 결과 개수: 2
+2025-07-15 15:28:38.356 [http-nio-8080-exec-8] INFO  p.u.d.r.resolver.ReportQueryResolver - GraphQL 쿼리 - 모든 신고 조회 완료: 결과 개수=2
+2025-07-15 15:28:52.389 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-15 15:28:52.392 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-07-15 15:28:52.443 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 중...
+2025-07-15 15:28:52.443 [SpringApplicationShutdownHook] INFO  p.upik.shared.ai.service.AIService - AIService 종료 완료
+2025-07-15 15:28:52.447 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15 15:28:52.454 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-07-15 15:28:52.495 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -93,7 +93,6 @@ public class OptionGeneratorServiceImpl implements OptionGeneratorServiceInterfa
      * @param count 생성할 선택지 개수
      * @return 생성된 선택지 응답의 CompletableFuture
      */
-    @Async("taskExecutor")
     public CompletableFuture<GenerateOptionsResponse> generateOptionsAsync(String title, int count) {
         long startTime = System.currentTimeMillis();
         log.debug("비동기 선택지 생성 시작 - 제목: {}, 개수: {}, 시작 시간: {}", title, count, startTime);
@@ -325,8 +324,8 @@ public class OptionGeneratorServiceImpl implements OptionGeneratorServiceInterfa
             // 각 가이드에 대한 상세 정보 로깅
             for (int i = 0; i < keywordGuides.size(); i++) {
                 KeywordGuideResponse guide = keywordGuides.get(i);
-                log.debug("검색된 가이드 #{} - ID: {}, 제목: '{}', 내용 길이: {} 글자",
-                        i+1, guide.getId(), guide.getTitle(),
+                log.debug("검색된 가이드 #{} - ID: {}, 제목: '{}', 타입: '{}', 내용 길이: {} 글자",
+                        i+1, guide.getId(), guide.getTitle(), guide.getGuideType(),
                         guide.getContent() != null ? guide.getContent().length() : 0);
             }
 
@@ -339,13 +338,30 @@ public class OptionGeneratorServiceImpl implements OptionGeneratorServiceInterfa
                             guide.getContent() != null ? guide.getContent().length() : 0,
                             summary.length());
 
+                    // 가이드 타입 로깅 추가
+                    String guideType = guide.getGuideType();
+                    log.debug("가이드 ID: {}, 제목: '{}', 타입: '{}'", guide.getId(), guide.getTitle(), guideType);
                     return GuideSimpleInfo.builder()
                         .id(guide.getId())
                         .title(guide.getTitle())
                         .summary(summary)
+                        .guideType(guideType) // 가이드 타입 명시적 설정
+                        .userId(guide.getUserId())
+                        .userName(guide.getUserName())
+                        .userProfileImage(null) // User 클래스에 해당 필드가 없으므로 null로 설정
+                        .createdAt(guide.getCreatedAt())
+                        .category(guide.getCategory())
+                        .likeCount(guide.getLikeCount())
+                        .revoteCount(guide.getRevoteCount())
                         .build();
                 })
                 .collect(Collectors.toList());
+
+            // 결과 로깅에 가이드 타입 정보 추가
+            if (!guideInfos.isEmpty()) {
+                log.info("유사 가이드 검색 완료 - 제목: '{}', 결과 개수: {}, 첫 번째 가이드 타입: '{}'",
+                         title, guideInfos.size(), guideInfos.get(0).getGuideType());
+            }
 
             logParams.put("찾은 가이드 수", guideInfos.size());
             logParams.put("소요시간", System.currentTimeMillis() - startTime + "ms");

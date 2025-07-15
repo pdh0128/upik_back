@@ -44,27 +44,66 @@ public class KeywordGuideResponse {
     private LocalDate createdAt;
     
     /**
+     * 가이드 타입
+     */
+    private String guideType;
+
+    /**
+     * 카테고리
+     */
+    private String category;
+    /**
+     * 좋아요 수
+     */
+    private Long likeCount;
+
+    /**
+     * 재투표 수
+     */
+    private Long revoteCount;
+
+    /**
+     * 작성자 ID
+     */
+    private UUID userId;
+
+    /**
+     * 작성자 이름
+     */
+    private String userName;
+
+    /**
+     * 작성자 프로필 이미지 URL
+     */
+    private String userProfileImage;
+
+    /**
+     * 작성자 이메일
+     */
+    private String userEmail;
+
+    /**
      * 가이드 내용의 요약된 문자열을 반환합니다.
-     * 
+     *
      * @param maxLength 최대 길이
      * @return 요약된 내용
      */
     public String getContentSummary(int maxLength) {
         if (content == null || content.length() <= maxLength) {
             return content;
-        }
+}
         return content.substring(0, maxLength) + "...";
     }
-    
+
     /**
      * 키워드가 포함된 제목에서 키워드를 하이라이트한 문자열을 반환합니다.
-     * 
+     *
      * @return 하이라이트된 제목
      */
     public String getHighlightedTitle() {
         if (title == null || keyword == null || keyword.isEmpty()) {
             return title;
-        }
+}
         return title.replaceAll("(?i)" + keyword, "<strong>" + keyword + "</strong>");
     }
 }

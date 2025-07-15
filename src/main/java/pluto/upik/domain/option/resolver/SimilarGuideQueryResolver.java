@@ -24,10 +24,11 @@ public class SimilarGuideQueryResolver {
     /**
      * 제목과 유사한 가이드를 검색하는 메서드
      * OptionGeneratorQuery의 findSimilarGuidesByTitle 필드에 매핑됩니다.
+     * 가이드 타입과 유저 정보를 포함한 모든 데이터를 반환합니다.
      *
      * @param parent 부모 객체
      * @param title 검색할 제목
-     * @return 유사 가이드 검색 결과
+     * @return 유사 가이드 검색 결과 (가이드 타입과 유저 정보 포함)
      */
     @SchemaMapping(typeName = "OptionGeneratorQuery", field = "findSimilarGuidesByTitle")
     public SimilarGuidesResponse findSimilarGuidesByTitle(Object parent, @Argument String title) {
@@ -45,12 +46,13 @@ public class SimilarGuideQueryResolver {
                         .build();
             }
 
-            // 서비스 호출
+            // 서비스 호출 - 가이드 타입과 유저 정보를 포함한 모든 데이터 조회
             SimilarGuidesResponse response = optionGeneratorService.findSimilarGuides(title);
 
             if (response.isSuccess() && response.getCount() > 0) {
-                log.info("GraphQL 쿼리 - 유사 가이드 검색 성공: 제목={}, 찾은 가이드 수={}",
-                        title, response.getCount());
+                log.info("GraphQL 쿼리 - 유사 가이드 검색 성공: 제목={}, 찾은 가이드 수={}, 첫 번째 가이드 타입={}",
+                        title, response.getCount(),
+                        response.getGuides().isEmpty() ? "없음" : response.getGuides().get(0).getGuideType());
             } else {
                 log.info("GraphQL 쿼리 - 유사 가이드 검색 결과 없음: 제목={}", title);
             }
